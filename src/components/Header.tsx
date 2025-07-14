@@ -65,7 +65,7 @@ const Header = () => {
                   src="/Final_Logo.png" 
                   alt="Action Guarding" 
                   className={`w-auto transition-all duration-500 ${
-                    isHomePage && scrollProgress > 0.3 ? 'h-14 lg:h-16' : 'h-16 lg:h-20'
+                    isHomePage && scrollProgress > 0.3 ? 'h-7 lg:h-9' : 'h-8 lg:h-10'
                   }`}
                 />
                 <span className={`font-montserrat font-bold text-white hover:text-agspl-red transition-all duration-500 ${
