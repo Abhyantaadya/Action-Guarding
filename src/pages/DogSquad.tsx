@@ -67,13 +67,13 @@ const DogSquad = () => {
       <ServiceHero 
         title="Specialized Dog Squad Services"
         subtitle="Elite canine detection units providing superior threat detection capabilities with highly trained dogs and professional handlers."
-        backgroundImage="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        backgroundImage="/AdobeStock_752642976_Preview copy.jpeg"
       />
       <ServiceOverview 
         title="Elite Canine Detection Services"
         description="Our specialized dog squad combines the natural detection abilities of highly trained canines with professional handlers to provide unmatched security screening capabilities. From explosive detection to narcotics identification, our canine units offer rapid, accurate, and non-invasive security solutions."
         benefits={benefits}
-        image="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image="/AdobeStock_1138496101_Preview copy.jpeg"
       />
       <ServiceOfferings 
         title="Our Canine Capabilities"
@@ -82,7 +82,7 @@ const DogSquad = () => {
       <ServiceAdvantage 
         title="The AGSPL Advantage in Canine Security"
         advantages={advantages}
-        image="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image="/AdobeStock_170773504_Preview copy.jpeg"
       />
       <ServiceCTA serviceName="Dog Squad" />
       <Footer />
