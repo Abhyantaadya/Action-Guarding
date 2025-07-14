@@ -118,9 +118,8 @@ const ServicesOverview = () => {
         
         <div className="text-center">
           <button className="border-2 border-agspl-blue text-agspl-blue px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-agspl-blue hover:text-white hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
-            <span className="group-hover:mr-2 transition-all duration-300">View All Services</span>
-            <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             View All Services
+            <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
         </div>
       </div>
