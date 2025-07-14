@@ -21,7 +21,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-75"
         style={{ 
-          backgroundImage: 'url(https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
+          backgroundImage: 'url(/Gemini_Generated_Image_ieh54yieh54yieh5.png)',
           transform: `translateY(${scrollY * 0.5}px) scale(${1 + scrollY * 0.0002})`
         }}
       />
