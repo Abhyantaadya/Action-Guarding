@@ -40,6 +40,13 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h1 className="font-montserrat font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 animate-fade-in-up hover:scale-105 transition-transform duration-300">
+        <h1 
+          className="font-montserrat font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 animate-fade-in-up hover:scale-105 transition-all duration-700 transform"
+          style={{
+            transform: `translateY(${scrollY * 0.1}px) scale(${1 - scrollY * 0.0001})`,
+            opacity: Math.max(0.3, 1 - scrollY * 0.001)
+          }}
+        >
           Your Trusted Partner in <br />
           <span className="text-agspl-red bg-gradient-to-r from-agspl-red to-red-400 bg-clip-text text-transparent">Integrated Security Solutions</span>
         </h1>
