@@ -62,7 +62,7 @@ const Header = () => {
             <Link to="/" className="block">
               <div className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
                 <img 
-                  src="/Final_Logo.png" 
+                  src="/Adobe Express - file.png" 
                   alt="Action Guarding" 
                   className={`w-auto transition-all duration-500 ${
                     isHomePage && scrollProgress > 0.3 ? 'h-7 lg:h-9' : 'h-8 lg:h-10'
