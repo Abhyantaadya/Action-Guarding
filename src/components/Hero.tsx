@@ -39,7 +39,6 @@ const Hero = () => {
       
       {/* Content */}
       <div className={`relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h1 className="font-montserrat font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 animate-fade-in-up hover:scale-105 transition-transform duration-300">
         <h1 
           className="font-montserrat font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 animate-fade-in-up hover:scale-105 transition-all duration-700 transform"
           style={{
