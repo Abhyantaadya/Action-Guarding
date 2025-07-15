@@ -65,7 +65,7 @@ const Header = () => {
                   src="/Adobe Express - file (1).png" 
                   alt="Action Guarding" 
                   className={`w-auto transition-all duration-500 ${
-                    isHomePage && scrollProgress > 0.3 ? 'h-10 lg:h-14' : 'h-12 lg:h-15'
+                    isHomePage && scrollProgress > 0.3 ? 'h-15 lg:h-21' : 'h-18 lg:h-22'
                   }`}
                 />
                 <span className={`font-montserrat font-bold text-white hover:text-agspl-red transition-all duration-500 ${
