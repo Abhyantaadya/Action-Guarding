@@ -19,6 +19,7 @@ import Careers from './pages/Careers';
 import ClientsTestimonials from './pages/ClientsTestimonials';
 import Contact from './pages/Contact';
 import LeadershipPage from './pages/LeadershipPage';
+import Industries from './pages/Industries';
 
 const HomePage = () => (
   <>
@@ -49,6 +50,7 @@ function App() {
           <Route path="/services/certified-training" element={<CertifiedTraining />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/clients-testimonials" element={<ClientsTestimonials />} />
+          <Route path="/industries" element={<Industries />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

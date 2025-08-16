@@ -205,9 +205,9 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <a href="#industries" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
+            <Link to="/industries" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
               Industries Served
-            </a>
+            </Link>
             <Link to="/clients-testimonials" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
               Clients & Testimonials
             </Link>
@@ -316,8 +316,9 @@ const Header = () => {
                 )}
               </div>
               <a href="#industries" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
+              <Link to="/industries" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
                 Industries Served
-              </a>
+              </Link>
               <Link to="/clients-testimonials" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
                 Clients & Testimonials
               </Link>
