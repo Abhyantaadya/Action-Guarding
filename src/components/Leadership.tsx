@@ -6,7 +6,7 @@ const Leadership = () => {
     {
       name: "Mr. Subhani Abdul",
       title: "Founder & CMD",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/WhatsApp Image 2025-08-16 at 13.31.30_ebd17a68.jpg",
       bio: "Ex-Indian Navy Officer with over 30 years of distinguished service in security and defense operations. His military precision and strategic vision have been instrumental in establishing AGSPL as a leader in integrated security solutions.",
       achievements: [
         "30+ years of security experience",
