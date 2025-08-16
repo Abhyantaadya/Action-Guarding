@@ -12,7 +12,7 @@ const ServiceHero = ({ title, subtitle, backgroundImage }: ServiceHeroProps) => 
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ backgroundImage: `url(/image copy.png)` }}
       />
       
       {/* Background Pattern */}
