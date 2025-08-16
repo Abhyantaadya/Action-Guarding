@@ -1,37 +1,7 @@
 import React from 'react';
-import { Target, Eye, Heart, Shield, Star, Users, CheckCircle } from 'lucide-react';
+import { Target, Eye, Heart, Shield, Star, Users } from 'lucide-react';
 
 const MissionVisionValues = () => {
-  const visionPoints = [
-    "Provide safe and secure environment",
-    "Assure trusted relationship",
-    "Create extraordinary value",
-    "Touch human lives",
-    "Inspire organizational growth",
-    "Offer elite solutions",
-    "Nurture social responsibility"
-  ];
-
-  const missionPoints = [
-    "Achieve Superior Levels of Performance",
-    "Architecting good corporate governance",
-    "Crafting a passionate work face",
-    "Transforming knowledge into productivity",
-    "Integrating products and services",
-    "Optimising the available resources",
-    "Neutralising challenges effectively"
-  ];
-
-  const qualityPolicyPoints = [
-    "Enhance client experience",
-    "Adherence to statutory compliances",
-    "Consistent delivery of quality services",
-    "Talent recognition and development",
-    "Improving the infrastructure and process",
-    "Offering value based solutions",
-    "Nullifying the errors continuously"
-  ];
-
   const values = [
     {
       icon: <Heart className="h-10 w-10 text-agspl-red mb-4" />,
@@ -72,14 +42,9 @@ const MissionVisionValues = () => {
               <Target className="h-12 w-12 text-agspl-red mr-4" />
               <h3 className="font-montserrat font-bold text-2xl text-agspl-blue">Our Mission</h3>
             </div>
-            <ul className="space-y-3">
-              {missionPoints.map((point, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-agspl-red rounded-full mt-3 flex-shrink-0"></div>
-                  <span className="font-open-sans text-lg text-gray-700 leading-relaxed">{point}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="font-open-sans text-lg text-gray-700 leading-relaxed">
+              To deliver unparalleled, integrated security solutions that empower businesses and communities with unwavering safety and peace of mind.
+            </p>
           </div>
           
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in-right">
@@ -87,14 +52,9 @@ const MissionVisionValues = () => {
               <Shield className="h-12 w-12 text-agspl-red mr-4" />
               <h3 className="font-montserrat font-bold text-2xl text-agspl-blue">Our Vision</h3>
             </div>
-            <ul className="space-y-3">
-              {visionPoints.map((point, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-agspl-red rounded-full mt-3 flex-shrink-0"></div>
-                  <span className="font-open-sans text-lg text-gray-700 leading-relaxed">{point}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="font-open-sans text-lg text-gray-700 leading-relaxed">
+              To be the most trusted and advanced security partner in South India, continuously innovating to meet evolving security challenges.
+            </p>
           </div>
         </div>
         
@@ -122,28 +82,6 @@ const MissionVisionValues = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-        
-        {/* Quality Policy Section */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <CheckCircle className="h-12 w-12 text-agspl-red mr-4" />
-              <h3 className="font-montserrat font-bold text-3xl text-agspl-blue">Our Quality Policy</h3>
-            </div>
-            <div className="w-24 h-1 bg-agspl-red mx-auto mb-8"></div>
-          </div>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up max-w-4xl mx-auto">
-            <ul className="space-y-4">
-              {qualityPolicyPoints.map((point, index) => (
-                <li key={index} className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-agspl-red rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="font-open-sans text-lg text-gray-700 leading-relaxed">{point}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
