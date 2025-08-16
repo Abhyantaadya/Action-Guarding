@@ -86,6 +86,9 @@ const ServicesOverview = () => {
             <div 
               key={index}
               className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1 group cursor-pointer relative overflow-hidden ${
+            <div 
+              key={index}
+              className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer relative overflow-hidden ${
                 visibleServices.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -93,7 +96,7 @@ const ServicesOverview = () => {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-agspl-blue/5 via-transparent to-agspl-red/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="relative group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="relative group-hover:scale-105 group-hover:rotate-6 transition-all duration-300">
                 {service.icon}
               </div>
               <h3 className="relative font-montserrat font-semibold text-xl text-agspl-blue mb-4 group-hover:text-agspl-red transition-colors duration-300">
