@@ -122,7 +122,7 @@ const Header = () => {
               }`}>
                 Services <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className={\`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
                 isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
               } ${isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                 <Link
