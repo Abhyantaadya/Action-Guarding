@@ -67,7 +67,7 @@ const PhysicalGuarding = () => {
       <ServiceHero 
         title="Physical Guarding Services"
         subtitle="Professional security personnel providing unwavering protection with military precision and advanced training for complete peace of mind."
-        backgroundImage="/image.png"
+        backgroundImage="/image copy.png"
       />
       <ServiceOverview 
         title="Comprehensive Physical Security Solutions"
