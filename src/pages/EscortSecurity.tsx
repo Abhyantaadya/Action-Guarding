@@ -67,7 +67,7 @@ const EscortSecurity = () => {
       <ServiceHero 
         title="Escort & EPO Security Services"
         subtitle="Elite executive protection and escort services providing discreet, professional security for high-profile individuals and VIPs."
-        backgroundImage="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        backgroundImage="/image copy copy copy.png"
       />
       <ServiceOverview 
         title="Elite Executive Protection Services"
