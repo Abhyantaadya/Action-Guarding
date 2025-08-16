@@ -315,7 +315,6 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <a href="#industries" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
               <Link to="/industries" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
                 Industries Served
               </Link>
