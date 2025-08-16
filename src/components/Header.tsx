@@ -4,11 +4,14 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
+  
+  // Timeout refs for managing hover delays
+  const aboutTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const servicesTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +31,45 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
+
+  // Clear timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current);
+      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+    };
+  }, []);
+
+  // Handle mouse enter for desktop dropdowns
+  const handleMouseEnter = (menu: string) => {
+    if (menu === 'about' && aboutTimeoutRef.current) {
+      clearTimeout(aboutTimeoutRef.current);
+      aboutTimeoutRef.current = null;
+    }
+    if (menu === 'services' && servicesTimeoutRef.current) {
+      clearTimeout(servicesTimeoutRef.current);
+      servicesTimeoutRef.current = null;
+    }
+    setOpenMenu(menu);
+  };
+
+  // Handle mouse leave for desktop dropdowns with delay
+  const handleMouseLeave = (menu: string) => {
+    const timeoutId = setTimeout(() => {
+      setOpenMenu(null);
+    }, 200);
+    
+    if (menu === 'about') {
+      aboutTimeoutRef.current = timeoutId;
+    } else if (menu === 'services') {
+      servicesTimeoutRef.current = timeoutId;
+    }
+  };
+
+  // Handle mobile dropdown toggle
+  const handleMobileToggle = (menu: string) => {
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
 
   // Dynamic styles based on scroll progress (only for home page)
   const isHomePage = location.pathname === '/';
@@ -87,8 +129,8 @@ const Header = () => {
             </Link>
             <div 
               className="relative group"
-              onMouseEnter={() => setIsAboutOpen(true)}
-              onMouseLeave={() => setIsAboutOpen(false)}
+              onMouseEnter={() => handleMouseEnter('about')}
+              onMouseLeave={() => handleMouseLeave('about')}
             >
               <button className={`text-white hover:text-agspl-red transition-all duration-200 font-open-sans flex items-center ${
                 isHomePage && scrollProgress > 0.5 ? 'transform hover:scale-105' : ''
@@ -97,7 +139,7 @@ const Header = () => {
               </button>
               <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
                 isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
-              } ${isAboutOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+              } ${openMenu === 'about' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                 <Link
                   to="/about"
                   className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
@@ -114,8 +156,8 @@ const Header = () => {
             </div>
             <div 
               className="relative group"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={() => handleMouseEnter('services')}
+              onMouseLeave={() => handleMouseLeave('services')}
             >
               <button className={`text-white hover:text-agspl-red transition-all duration-200 font-open-sans flex items-center ${
                 isHomePage && scrollProgress > 0.5 ? 'transform hover:scale-105' : ''
@@ -124,7 +166,7 @@ const Header = () => {
               </button>
               <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
                 isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
-              } ${isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+              } ${openMenu === 'services' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                 <Link
                   to="/services/physical-guarding"
                   className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
@@ -203,12 +245,12 @@ const Header = () => {
               </Link>
               <div>
                 <button 
-                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                  onClick={() => handleMobileToggle('about')}
                   className="flex items-center justify-between w-full px-3 py-2 text-white hover:text-agspl-red font-open-sans"
                 >
                   About Us <ChevronDown className="h-4 w-4" />
                 </button>
-                {isAboutOpen && (
+                {openMenu === 'about' && (
                   <div className="pl-6 space-y-1">
                     <Link
                       to="/about"
@@ -227,12 +269,12 @@ const Header = () => {
               </div>
               <div>
                 <button 
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  onClick={() => handleMobileToggle('services')}
                   className="flex items-center justify-between w-full px-3 py-2 text-white hover:text-agspl-red font-open-sans"
                 >
                   Services <ChevronDown className="h-4 w-4" />
                 </button>
-                {isServicesOpen && (
+                {openMenu === 'services' && (
                   <div className="pl-6 space-y-1">
                     <Link
                       to="/services/physical-guarding"
