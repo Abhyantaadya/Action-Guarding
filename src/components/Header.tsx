@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
@@ -84,9 +85,35 @@ const Header = () => {
             <Link to="/" className={`transition-colors duration-200 font-open-sans ${location.pathname === '/' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'}`}>
               Home
             </Link>
-            <Link to="/about" className={`transition-colors duration-200 font-open-sans ${location.pathname === '/about' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'}`}>
-              About Us
-            </Link>
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsAboutOpen(true)}
+              onMouseLeave={() => setIsAboutOpen(false)}
+            >
+              <button className={`text-white hover:text-agspl-red transition-all duration-200 font-open-sans flex items-center ${
+                isHomePage && scrollProgress > 0.5 ? 'transform hover:scale-105' : ''
+              }`}>
+                About Us <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {isAboutOpen && (
+                <div className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
+                  isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
+                }`}>
+                  <Link
+                    to="/about"
+                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    to="/about/leadership"
+                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  >
+                    Leadership
+                  </Link>
+                </div>
+              )}
+            </div>
             <div 
               className="relative group"
               onMouseEnter={() => setIsServicesOpen(true)}
@@ -178,9 +205,30 @@ const Header = () => {
               <Link to="/" className={`block px-3 py-2 font-open-sans ${location.pathname === '/' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'}`}>
                 Home
               </Link>
-              <Link to="/about" className={`block px-3 py-2 font-open-sans ${location.pathname === '/about' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'}`}>
-                About Us
-              </Link>
+              <div>
+                <button 
+                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-white hover:text-agspl-red font-open-sans"
+                >
+                  About Us <ChevronDown className="h-4 w-4" />
+                </button>
+                {isAboutOpen && (
+                  <div className="pl-6 space-y-1">
+                    <Link
+                      to="/about"
+                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      to="/about/leadership"
+                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                    >
+                      Leadership
+                    </Link>
+                  </div>
+                )}
+              </div>
               <div>
                 <button 
                   onClick={() => setIsServicesOpen(!isServicesOpen)}

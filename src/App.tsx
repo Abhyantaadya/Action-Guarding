@@ -18,6 +18,7 @@ import CertifiedTraining from './pages/CertifiedTraining';
 import Careers from './pages/Careers';
 import ClientsTestimonials from './pages/ClientsTestimonials';
 import Contact from './pages/Contact';
+import LeadershipPage from './pages/LeadershipPage';
 
 const HomePage = () => (
   <>
@@ -39,6 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about/leadership" element={<LeadershipPage />} />
           <Route path="/services/physical-guarding" element={<PhysicalGuarding />} />
           <Route path="/services/escort-security" element={<EscortSecurity />} />
           <Route path="/services/electronic-security" element={<ElectronicSecurity />} />
