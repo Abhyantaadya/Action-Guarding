@@ -124,7 +124,9 @@ const Header = () => {
           <nav className={`hidden lg:flex transition-all duration-500 ${
             isHomePage && scrollProgress > 0.3 ? 'space-x-6' : 'space-x-8'
           }`}>
-            <Link to="/" className={`transition-colors duration-200 font-open-sans ${location.pathname === '/' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'}`}>
+            <Link to="/" className={`transition-colors duration-200 font-open-sans ${
+              location.pathname === '/' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+            }`}>
               Home
             </Link>
             <div 
@@ -132,7 +134,9 @@ const Header = () => {
               onMouseEnter={() => handleMouseEnter('about')}
               onMouseLeave={() => handleMouseLeave('about')}
             >
-              <button className={`text-white hover:text-agspl-red transition-all duration-200 font-open-sans flex items-center ${
+              <button className={`transition-all duration-200 font-open-sans flex items-center ${
+                location.pathname.startsWith('/about') ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+              } ${
                 isHomePage && scrollProgress > 0.5 ? 'transform hover:scale-105' : ''
               }`}>
                 About Us <ChevronDown className="ml-1 h-4 w-4" />
@@ -142,13 +146,21 @@ const Header = () => {
               } ${openMenu === 'about' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                 <Link
                   to="/about"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/about' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/about/leadership"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/about/leadership' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   Leadership
                 </Link>
@@ -159,7 +171,9 @@ const Header = () => {
               onMouseEnter={() => handleMouseEnter('services')}
               onMouseLeave={() => handleMouseLeave('services')}
             >
-              <button className={`text-white hover:text-agspl-red transition-all duration-200 font-open-sans flex items-center ${
+              <button className={`transition-all duration-200 font-open-sans flex items-center ${
+                location.pathname.startsWith('/services') ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+              } ${
                 isHomePage && scrollProgress > 0.5 ? 'transform hover:scale-105' : ''
               }`}>
                 Services <ChevronDown className="ml-1 h-4 w-4" />
@@ -169,52 +183,84 @@ const Header = () => {
               } ${openMenu === 'services' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                 <Link
                   to="/services/physical-guarding"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/services/physical-guarding' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   Physical Guarding
                 </Link>
                 <Link
                   to="/services/escort-security"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/services/escort-security' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   Escort and EPO Security
                 </Link>
                 <Link
                   to="/services/electronic-security"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/services/electronic-security' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   Electronic Security
                 </Link>
                 <Link
                   to="/services/dog-squad"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/services/dog-squad' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   Dog Squad
                 </Link>
                 <Link
                   to="/services/fire-training"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/services/fire-training' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   Fire Training and Threat Analysis
                 </Link>
                 <Link
                   to="/services/certified-training"
-                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                  className={`block px-4 py-2 transition-colors duration-200 font-open-sans text-sm ${
+                    location.pathname === '/services/certified-training' 
+                      ? 'text-agspl-red bg-agspl-light-gray' 
+                      : 'text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red'
+                  }`}
                 >
                   NSDC/MEPSC Certified Training
                 </Link>
               </div>
             </div>
-            <Link to="/industries" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
+            <Link to="/industries" className={`transition-colors duration-200 font-open-sans ${
+              location.pathname === '/industries' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+            }`}>
               Industries Served
             </Link>
-            <Link to="/clients-testimonials" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
+            <Link to="/clients-testimonials" className={`transition-colors duration-200 font-open-sans ${
+              location.pathname === '/clients-testimonials' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+            }`}>
               Clients & Testimonials
             </Link>
-            <Link to="/careers" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
+            <Link to="/careers" className={`transition-colors duration-200 font-open-sans ${
+              location.pathname === '/careers' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+            }`}>
               Careers
             </Link>
-            <Link to="/contact" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
+            <Link to="/contact" className={`transition-colors duration-200 font-open-sans ${
+              location.pathname === '/contact' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+            }`}>
               Contact Us
             </Link>
           </nav>
@@ -246,7 +292,9 @@ const Header = () => {
               <div>
                 <button 
                   onClick={() => handleMobileToggle('about')}
-                  className="flex items-center justify-between w-full px-3 py-2 text-white hover:text-agspl-red font-open-sans"
+                  className={`flex items-center justify-between w-full px-3 py-2 font-open-sans ${
+                    location.pathname.startsWith('/about') ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+                  }`}
                 >
                   About Us <ChevronDown className="h-4 w-4" />
                 </button>
@@ -254,13 +302,17 @@ const Header = () => {
                   <div className="pl-6 space-y-1">
                     <Link
                       to="/about"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/about' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       About Us
                     </Link>
                     <Link
                       to="/about/leadership"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/about/leadership' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       Leadership
                     </Link>
@@ -270,7 +322,9 @@ const Header = () => {
               <div>
                 <button 
                   onClick={() => handleMobileToggle('services')}
-                  className="flex items-center justify-between w-full px-3 py-2 text-white hover:text-agspl-red font-open-sans"
+                  className={`flex items-center justify-between w-full px-3 py-2 font-open-sans ${
+                    location.pathname.startsWith('/services') ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+                  }`}
                 >
                   Services <ChevronDown className="h-4 w-4" />
                 </button>
@@ -278,53 +332,73 @@ const Header = () => {
                   <div className="pl-6 space-y-1">
                     <Link
                       to="/services/physical-guarding"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/services/physical-guarding' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       Physical Guarding
                     </Link>
                     <Link
                       to="/services/escort-security"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/services/escort-security' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       Escort and EPO Security
                     </Link>
                     <Link
                       to="/services/electronic-security"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/services/electronic-security' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       Electronic Security
                     </Link>
                     <Link
                       to="/services/dog-squad"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/services/dog-squad' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       Dog Squad
                     </Link>
                     <Link
                       to="/services/fire-training"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/services/fire-training' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       Fire Training and Threat Analysis
                     </Link>
                     <Link
                       to="/services/certified-training"
-                      className="block px-3 py-2 text-agspl-muted-gray hover:text-agspl-red font-open-sans text-sm"
+                      className={`block px-3 py-2 font-open-sans text-sm ${
+                        location.pathname === '/services/certified-training' ? 'text-agspl-red' : 'text-agspl-muted-gray hover:text-agspl-red'
+                      }`}
                     >
                       NSDC/MEPSC Certified Training
                     </Link>
                   </div>
                 )}
               </div>
-              <Link to="/industries" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
+              <Link to="/industries" className={`block px-3 py-2 font-open-sans ${
+                location.pathname === '/industries' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+              }`}>
                 Industries Served
               </Link>
-              <Link to="/clients-testimonials" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
+              <Link to="/clients-testimonials" className={`block px-3 py-2 font-open-sans ${
+                location.pathname === '/clients-testimonials' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+              }`}>
                 Clients & Testimonials
               </Link>
-              <Link to="/careers" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
+              <Link to="/careers" className={`block px-3 py-2 font-open-sans ${
+                location.pathname === '/careers' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+              }`}>
                 Careers
               </Link>
-              <Link to="/contact" className="block px-3 py-2 text-white hover:text-agspl-red font-open-sans">
+              <Link to="/contact" className={`block px-3 py-2 font-open-sans ${
+                location.pathname === '/contact' ? 'text-agspl-red' : 'text-white hover:text-agspl-red'
+              }`}>
                 Contact Us
               </Link>
             </div>
