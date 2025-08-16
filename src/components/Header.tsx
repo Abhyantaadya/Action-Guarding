@@ -96,23 +96,21 @@ const Header = () => {
                 About Us <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
-                <div className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
-                  isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
                 isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
-              } ${isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-                    to="/about"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    to="/about/leadership"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    Leadership
-                  </Link>
-                </div>
-              )}
+              } ${isAboutOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <Link
+                  to="/about"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/about/leadership"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  Leadership
+                </Link>
+              </div>
             </div>
             <div 
               className="relative group"
@@ -124,48 +122,46 @@ const Header = () => {
               }`}>
                 Services <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
-                <div className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
-                  isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
-                }`}>
-                  <Link
-                    to="/services/physical-guarding"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    Physical Guarding
-                  </Link>
-                  <Link
-                    to="/services/escort-security"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    Escort and EPO Security
-                  </Link>
-                  <Link
-                    to="/services/electronic-security"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    Electronic Security
-                  </Link>
-                  <Link
-                    to="/services/dog-squad"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    Dog Squad
-                  </Link>
-                  <Link
-                    to="/services/fire-training"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    Fire Training and Threat Analysis
-                  </Link>
-                  <Link
-                    to="/services/certified-training"
-                    className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
-                  >
-                    NSDC/MEPSC Certified Training
-                  </Link>
-                </div>
-              )}
+              <div className={\`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
+                isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
+              } ${isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <Link
+                  to="/services/physical-guarding"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  Physical Guarding
+                </Link>
+                <Link
+                  to="/services/escort-security"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  Escort and EPO Security
+                </Link>
+                <Link
+                  to="/services/electronic-security"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  Electronic Security
+                </Link>
+                <Link
+                  to="/services/dog-squad"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  Dog Squad
+                </Link>
+                <Link
+                  to="/services/fire-training"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  Fire Training and Threat Analysis
+                </Link>
+                <Link
+                  to="/services/certified-training"
+                  className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
+                >
+                  NSDC/MEPSC Certified Training
+                </Link>
+              </div>
             </div>
             <a href="#industries" className="text-white hover:text-agspl-red transition-colors duration-200 font-open-sans">
               Industries Served
