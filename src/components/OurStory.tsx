@@ -26,7 +26,7 @@ const OurStory = () => {
               className="rounded-lg object-cover h-32 md:h-44 w-full shadow-lg"
             />
             <img 
-              src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop" 
+              src="/family[1].jpg" 
               alt="Professional security team"
               className="rounded-lg object-cover h-32 md:h-44 w-full shadow-lg"
             />
