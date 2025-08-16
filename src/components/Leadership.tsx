@@ -18,7 +18,7 @@ const Leadership = () => {
     {
       name: "Mr. Hassan Jahangir",
       title: "Director",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/WhatsApp Image 2025-08-16 at 13.32.30_8d5a3cef.jpg",
       bio: "Seasoned security professional with extensive experience in operations management and client relations. His leadership ensures seamless service delivery and maintains the highest standards of security excellence across all AGSPL operations.",
       achievements: [
         "Expert in operations management",
