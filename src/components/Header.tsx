@@ -95,11 +95,11 @@ const Header = () => {
               }`}>
                 About Us <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              {isAboutOpen && (
+              <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
                 <div className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
                   isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
-                }`}>
-                  <Link
+                isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
+              } ${isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                     to="/about"
                     className="block px-4 py-2 text-agspl-blue hover:bg-agspl-light-gray hover:text-agspl-red transition-colors duration-200 font-open-sans text-sm"
                   >
@@ -124,7 +124,7 @@ const Header = () => {
               }`}>
                 Services <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              {isServicesOpen && (
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-opacity duration-300 ${
                 <div className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
                   isHomePage && scrollProgress > 0.5 ? 'shadow-2xl border border-agspl-red/10' : ''
                 }`}>
