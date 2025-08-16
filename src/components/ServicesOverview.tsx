@@ -85,9 +85,6 @@ const ServicesOverview = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1 group cursor-pointer relative overflow-hidden ${
-            <div 
-              key={index}
               className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer relative overflow-hidden ${
                 visibleServices.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
