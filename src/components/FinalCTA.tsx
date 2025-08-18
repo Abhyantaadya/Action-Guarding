@@ -1,9 +1,49 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Phone, Users, Clock } from 'lucide-react';
 
+// Custom hook for counter animation
+const useCounter = (end: number, duration: number = 2000, shouldStart: boolean = false) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!shouldStart) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(easeOutQuart * end));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [end, duration, shouldStart]);
+
+  return count;
+};
+
 const FinalCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [startCounters, setStartCounters] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  // Counter hooks
+  const professionalsCount = useCounter(5000, 2500, startCounters);
+  const yearsCount = useCounter(15, 2000, startCounters);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -11,6 +51,8 @@ const FinalCTA = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            // Start counters with a slight delay after visibility
+            setTimeout(() => setStartCounters(true), 500);
           }
         });
       },
@@ -59,19 +101,25 @@ const FinalCTA = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-white" style={{ animationDelay: '0.5s' }}>
           <div className="group hover:scale-110 transition-transform duration-300">
             <Clock className="h-8 w-8 text-agspl-red mx-auto mb-2 group-hover:rotate-12 transition-transform duration-300" />
-            <div className="font-montserrat font-semibold text-2xl text-agspl-red mb-2 group-hover:text-red-400 transition-colors duration-300">24/7</div>
+            <div className="font-montserrat font-semibold text-2xl text-agspl-red mb-2 group-hover:text-red-400 transition-colors duration-300">
+              24/7
+            </div>
             <div className="font-open-sans group-hover:text-gray-200 transition-colors duration-300">Emergency Response</div>
           </div>
           <div className="group hover:scale-110 transition-transform duration-300">
             <Users className="h-8 w-8 text-agspl-red mx-auto mb-2 group-hover:rotate-12 transition-transform duration-300" />
-            <div className="font-montserrat font-semibold text-2xl text-agspl-red mb-2 group-hover:text-red-400 transition-colors duration-300">5000+</div>
+            <div className="font-montserrat font-semibold text-2xl text-agspl-red mb-2 group-hover:text-red-400 transition-colors duration-300">
+              {startCounters ? `${professionalsCount.toLocaleString()}+` : '0+'}
+            </div>
             <div className="font-open-sans group-hover:text-gray-200 transition-colors duration-300">Trained Professionals</div>
           </div>
           <div className="group hover:scale-110 transition-transform duration-300">
             <div className="w-8 h-8 bg-agspl-red rounded-full mx-auto mb-2 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
               <span className="text-white font-bold text-sm">★</span>
             </div>
-            <div className="font-montserrat font-semibold text-2xl text-agspl-red mb-2 group-hover:text-red-400 transition-colors duration-300">15+</div>
+            <div className="font-montserrat font-semibold text-2xl text-agspl-red mb-2 group-hover:text-red-400 transition-colors duration-300">
+              {startCounters ? `${yearsCount}+` : '0+'}
+            </div>
             <div className="font-open-sans group-hover:text-gray-200 transition-colors duration-300">Years of Excellence</div>
           </div>
         </div>
