@@ -25,7 +25,12 @@ const Footer = () => {
               <a href="#" className="text-gray-300 hover:text-agspl-red transition-colors duration-200">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-agspl-red transition-colors duration-200">
+              <a 
+                href="https://www.instagram.com/actionguarding?igsh=eXd3bG56cjQxMHFz" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-agspl-red transition-colors duration-200"
+              >
                 <Instagram className="h-6 w-6" />
               </a>
             </div>
