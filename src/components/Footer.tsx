@@ -112,7 +112,12 @@ const Footer = () => {
               <a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200 text-sm">
                 Terms of Service
               </a>
-              <a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200 text-sm">
+              <a 
+                href="https://maps.app.goo.gl/hJfZy6p2Nqop4TWP9" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200 text-sm"
+              >
                 Sitemap
               </a>
             </div>
