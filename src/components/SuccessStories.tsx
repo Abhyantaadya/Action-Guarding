@@ -28,7 +28,7 @@ const SuccessStories = () => {
       industry: "Residential",
       challenge: "Community-wide safety",
       solution: "24/7 integrated monitoring",
-      image: "/Manufacturing Facility Security Overhaul.png/Gemini_Generated_Image_8b7ml48b7ml48b7m (1)[1].png"
+      image: "/Residential Community Safety Enhancement.png/Gemini_Generated_Image_f4xc9f4xc9f4xc9f[2].png"
     },
     {
       icon: <Award className="h-12 w-12 text-agspl-red" />,
