@@ -10,7 +10,7 @@ const SuccessStories = () => {
       industry: "Information Technology",
       challenge: "Large-scale campus security",
       solution: "Integrated security ecosystem",
-      image: "https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+      image: "/Corporate Campus Security Transformation.png/Gemini_Generated_Image_vait1gvait1gvait[1].png"
     },
     {
       icon: <Shield className="h-12 w-12 text-agspl-red" />,
