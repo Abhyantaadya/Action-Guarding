@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, Users, Clock } from 'lucide-react';
 
 // Custom hook for counter animation
@@ -88,10 +89,13 @@ const FinalCTA = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg group">
+          <Link 
+            to="/contact"
+            className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg group inline-block text-center"
+          >
             <span className="group-hover:mr-2 transition-all duration-300">Request a Free Quote</span>
             <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </Link>
           <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-agspl-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm group">
             <Phone className="inline-block mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
             <span>Contact Us Directly</span>
