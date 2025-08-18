@@ -95,10 +95,9 @@ const ServicesOverview = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <Link 
+            <div
               key={index}
-              to={getServiceRoute(service.title)}
-              className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer relative overflow-hidden ${
+              className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden ${
                 visibleServices.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -115,21 +114,24 @@ const ServicesOverview = () => {
               <p className="relative font-open-sans text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
                 {service.description}
               </p>
-              <div className="relative flex items-center text-agspl-red group-hover:translate-x-2 group-hover:text-red-600 transition-all duration-300">
+              <Link 
+                to={getServiceRoute(service.title)}
+                className="relative flex items-center text-agspl-red group-hover:translate-x-2 group-hover:text-red-600 transition-all duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-agspl-red focus:ring-offset-2 rounded-md p-1 -m-1"
+              >
                 <span className="font-open-sans font-semibold mr-2">Learn More</span>
                 <ArrowRight className="h-4 w-4 group-hover:scale-125 transition-transform duration-300" />
-              </div>
+              </Link>
               
               {/* Border Animation */}
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-agspl-red rounded-xl transition-colors duration-300"></div>
-            </Link>
+            </div>
           ))}
         </div>
         
         <div className="text-center">
           <Link 
             to="/services/physical-guarding"
-            className="inline-block border-2 border-agspl-blue text-agspl-blue px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-agspl-blue hover:text-white hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group"
+            className="inline-block border-2 border-agspl-blue text-agspl-blue px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-agspl-blue hover:text-white hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-agspl-blue focus:ring-offset-2"
           >
             View All Services
             <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
