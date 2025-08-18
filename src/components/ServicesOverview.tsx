@@ -95,9 +95,10 @@ const ServicesOverview = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden ${
+              to={getServiceRoute(service.title)}
+              className={`block bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-agspl-red focus:ring-offset-2 ${
                 visibleServices.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -114,17 +115,14 @@ const ServicesOverview = () => {
               <p className="relative font-open-sans text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
                 {service.description}
               </p>
-              <Link 
-                to={getServiceRoute(service.title)}
-                className="relative flex items-center text-agspl-red group-hover:translate-x-2 group-hover:text-red-600 transition-all duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-agspl-red focus:ring-offset-2 rounded-md p-1 -m-1"
-              >
+              <div className="relative flex items-center text-agspl-red group-hover:translate-x-2 group-hover:text-red-600 transition-all duration-300">
                 <span className="font-open-sans font-semibold mr-2">Learn More</span>
                 <ArrowRight className="h-4 w-4 group-hover:scale-125 transition-transform duration-300" />
-              </Link>
+              </div>
               
               {/* Border Animation */}
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-agspl-red rounded-xl transition-colors duration-300"></div>
-            </div>
+            </Link>
           ))}
         </div>
         
