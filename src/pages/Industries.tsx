@@ -11,7 +11,7 @@ const Industries = () => {
       <ServiceHero 
         title="Industries We Secure"
         subtitle="Protecting diverse sectors with industry-specific security expertise tailored to meet unique operational requirements and challenges."
-        backgroundImage="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        backgroundImage="/IndustriesServed.png/image.png"
       />
       <IndustriesServed />
       <Footer />
