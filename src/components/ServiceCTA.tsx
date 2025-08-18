@@ -26,9 +26,12 @@ const ServiceCTA = ({ serviceName }: ServiceCTAProps) => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+          <Link 
+            to="/contact#contact-form-section"
+            className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg inline-block text-center"
+          >
             Request a {serviceName} Quote
-          </button>
+          </Link>
           <Link 
             to="/"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-agspl-blue transition-all duration-300 inline-block"
