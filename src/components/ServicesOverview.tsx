@@ -103,7 +103,7 @@ const ServicesOverview = () => {
                 {service.description}
               </p>
               <Link 
-                to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '').replace(/\//g, '-')}`}
+                to={getServiceRoute(service.title)}
                 className="relative flex items-center text-agspl-red group-hover:translate-x-2 group-hover:text-red-600 transition-all duration-300"
               >
                 <span className="font-open-sans font-semibold mr-2">Learn More</span>
@@ -117,10 +117,13 @@ const ServicesOverview = () => {
         </div>
         
         <div className="text-center">
-          <button className="border-2 border-agspl-blue text-agspl-blue px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-agspl-blue hover:text-white hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
+          <Link 
+            to="/services/physical-guarding"
+            className="inline-block border-2 border-agspl-blue text-agspl-blue px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-agspl-blue hover:text-white hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group"
+          >
             View All Services
             <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
