@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Building, Users, Award } from 'lucide-react';
 
 const SuccessStories = () => {
@@ -115,9 +116,12 @@ const SuccessStories = () => {
             <p className="font-open-sans text-lg mb-6 max-w-2xl mx-auto">
               Let us help you overcome your security challenges with customized solutions that deliver measurable results.
             </p>
-            <button className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+            <Link 
+              to="/contact"
+              className="inline-block bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+            >
               Discuss Your Security Needs
-            </button>
+            </Link>
           </div>
         </div>
       </div>
