@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
@@ -34,13 +35,13 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="font-montserrat font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Home</a></li>
-              <li><a href="#about" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">About Us</a></li>
-              <li><a href="#services" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Services</a></li>
-              <li><a href="#industries" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Industries</a></li>
-              <li><a href="#clients" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Clients</a></li>
-              <li><a href="#careers" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Careers</a></li>
-              <li><a href="#contact" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Contact</a></li>
+              <li><Link to="/" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Home</Link></li>
+              <li><Link to="/about" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">About Us</Link></li>
+              <li><Link to="/services/physical-guarding" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Services</Link></li>
+              <li><Link to="/industries" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Industries</Link></li>
+              <li><Link to="/clients-testimonials" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Clients</Link></li>
+              <li><Link to="/careers" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Careers</Link></li>
+              <li><Link to="/contact" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 
