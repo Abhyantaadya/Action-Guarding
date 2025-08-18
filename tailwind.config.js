@@ -56,8 +56,8 @@ export default {
           '100%': { backgroundPosition: '200% 0' },
         },
         marquee: {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-100% - var(--gap)))' }
         }
       },
     },
