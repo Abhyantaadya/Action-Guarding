@@ -73,7 +73,7 @@ const PhysicalGuarding = () => {
         title="Comprehensive Physical Security Solutions"
         description="Our physical guarding services provide the human element that technology cannot replace. With over 5000 trained professionals led by ex-military expertise, we deliver unmatched security presence that deters threats, manages access, and ensures rapid response to any security incident."
         benefits={benefits}
-        image="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image="/Physical guarding.png/image.png"
       />
       <ServiceOfferings 
         title="What We Offer"
