@@ -96,25 +96,33 @@ const DirectContact = () => {
                 </h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.facebook.com/share/1C6tAHPv9R/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="bg-agspl-blue text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-300 transform hover:scale-110"
                   >
                     <Facebook className="h-6 w-6" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://x.com/action_guarding?t=STRwJe7Qt_PMKQbLyayQTg&s=09" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="bg-agspl-blue text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-300 transform hover:scale-110"
                   >
                     <Twitter className="h-6 w-6" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/company/action-guarding-services/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="bg-agspl-blue text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-300 transform hover:scale-110"
                   >
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/actionguarding?igsh=eXd3bG56cjQxMHFz" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="bg-agspl-blue text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-300 transform hover:scale-110"
                   >
                     <Instagram className="h-6 w-6" />
