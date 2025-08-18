@@ -37,10 +37,17 @@ const LocationsMap = () => {
                   </h3>
                   <p className="font-open-sans text-gray-700 leading-relaxed">
                     <strong>Action Guarding Services Pvt. Ltd.</strong><br />
-                    4th Floor, High Mark Chambers<br />
-                    #8-1-199/2, Khajaguda X Road<br />
-                    Cyberabad, Hyderabad – 500008<br />
-                    Telangana, India
+                    <a 
+                      href="https://maps.app.goo.gl/hJfZy6p2Nqop4TWP9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-agspl-red transition-colors duration-200"
+                    >
+                      4th Floor, High Mark Chambers<br />
+                      #8-1-199/2, Khajaguda X Road<br />
+                      Cyberabad, Hyderabad – 500008<br />
+                      Telangana, India
+                    </a>
                   </p>
                 </div>
               </div>
