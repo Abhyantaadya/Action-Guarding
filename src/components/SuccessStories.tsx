@@ -28,7 +28,7 @@ const SuccessStories = () => {
       industry: "Residential",
       challenge: "Community-wide safety",
       solution: "24/7 integrated monitoring",
-      image: "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+      image: "/Manufacturing Facility Security Overhaul.png/Gemini_Generated_Image_8b7ml48b7ml48b7m (1)[1].png"
     },
     {
       icon: <Award className="h-12 w-12 text-agspl-red" />,
@@ -37,7 +37,7 @@ const SuccessStories = () => {
       industry: "Manufacturing",
       challenge: "Industrial asset protection",
       solution: "Multi-tier security framework",
-      image: "https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+      image: "/Manufacturing Facility Security Overhaul.png/Gemini_Generated_Image_8b7ml48b7ml48b7m (1)[1].png"
     }
   ];
 
