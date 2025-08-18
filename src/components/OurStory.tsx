@@ -111,7 +111,7 @@ const OurStory = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <img 
-              src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop" 
+              src="/image copy copy copy copy.png" 
               alt="Technology integration"
               className="rounded-lg object-cover h-32 md:h-44 w-full shadow-lg"
             />
