@@ -73,7 +73,7 @@ const EscortSecurity = () => {
         title="Elite Executive Protection Services"
         description="Our Executive Protection Officers (EPO) and escort services provide the highest level of personal security for VIPs, executives, and high-profile individuals. With military-trained professionals and advanced security protocols, we ensure complete safety while maintaining discretion and allowing normal business operations."
         benefits={benefits}
-        image="/WhatsApp Image 2025-08-16 at 13.31.30_ebd17a68.jpg"
+        image="/image copy copy copy copy copy.png"
       />
       <ServiceOfferings 
         title="Our Protection Services"
