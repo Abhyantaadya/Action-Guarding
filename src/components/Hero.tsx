@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
@@ -58,9 +59,12 @@ const Hero = () => {
           <button className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg group">
             Request a Quote
           </button>
-          <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-agspl-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+          <Link 
+            to="/services/physical-guarding"
+            className="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-agspl-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm inline-block text-center"
+          >
             Explore Our Services
-          </button>
+          </Link>
         </div>
       </div>
       
