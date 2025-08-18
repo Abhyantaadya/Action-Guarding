@@ -33,7 +33,7 @@ const ServiceCTA = ({ serviceName }: ServiceCTAProps) => {
             Request a {serviceName} Quote
           </Link>
           <Link 
-            to="/"
+            to="/#security-solutions-overview"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-agspl-blue transition-all duration-300 inline-block"
           >
             View All Our Security Solutions

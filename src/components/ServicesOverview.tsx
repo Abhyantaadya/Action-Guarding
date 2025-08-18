@@ -75,7 +75,7 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-agspl-light-gray relative overflow-hidden">
+    <section id="security-solutions-overview" ref={sectionRef} className="py-20 bg-agspl-light-gray relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-agspl-blue/10 to-transparent rounded-full animate-float"></div>
