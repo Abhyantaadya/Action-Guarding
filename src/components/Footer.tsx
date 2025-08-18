@@ -13,7 +13,7 @@ const Footer = () => {
               Action Guarding Services Pvt. Ltd.
             </h3>
             <p className="font-open-sans text-gray-300 mb-6 leading-relaxed">
-              Your trusted partner in comprehensive security solutions. Vigilance, Integrity, Excellence - our commitment to your safety.
+              Established in 2012 by Mr.Subhani Abdul a Veteran from Indian Navy, a Certified Security Practitioner and renowned name in the Service Industry and presence across South India.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-agspl-red transition-colors duration-200">
