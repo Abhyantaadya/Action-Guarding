@@ -6,6 +6,18 @@ const ServicesOverview = () => {
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
+  const getServiceRoute = (serviceTitle: string): string => {
+    const routeMap: { [key: string]: string } = {
+      "Physical Guarding": "/services/physical-guarding",
+      "Escort and EPO Security": "/services/escort-security", 
+      "Electronic Security": "/services/electronic-security",
+      "Dog Squad": "/services/dog-squad",
+      "Fire Training & Threat Analysis": "/services/fire-training",
+      "NSDC/MEPSC Certified Training": "/services/certified-training"
+    };
+    return routeMap[serviceTitle] || "/services/physical-guarding";
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
