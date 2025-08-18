@@ -73,7 +73,7 @@ const ElectronicSecurity = () => {
         title="Advanced Electronic Security Solutions"
         description="Our electronic security systems combine cutting-edge technology with intelligent monitoring to provide comprehensive protection. From AI-powered surveillance cameras to biometric access control, we deliver integrated solutions that enhance security while providing real-time insights and remote management capabilities."
         benefits={benefits}
-        image="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+        image="/image copy copy copy copy copy copy.png"
       />
       <ServiceOfferings 
         title="Our Technology Solutions"
