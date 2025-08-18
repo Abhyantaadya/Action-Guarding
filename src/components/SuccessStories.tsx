@@ -19,7 +19,7 @@ const SuccessStories = () => {
       industry: "Event Management",
       challenge: "Multi-layered event security",
       solution: "Comprehensive protection protocol",
-      image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+      image: "/High-Profile Event Security Excellence.png/Gemini_Generated_Image_28nzjd28nzjd28nz[1].png"
     },
     {
       icon: <Users className="h-12 w-12 text-agspl-red" />,
