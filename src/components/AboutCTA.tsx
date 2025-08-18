@@ -24,10 +24,13 @@ const AboutCTA = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <button className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center">
+              <Link 
+                to="/services/physical-guarding"
+                className="bg-agspl-red text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center"
+              >
                 Explore Our Services
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
+              </Link>
               <a 
                 href="mailto:info@actionforce.in"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-agspl-blue transition-all duration-300 flex items-center justify-center"
