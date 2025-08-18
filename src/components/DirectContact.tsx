@@ -50,10 +50,10 @@ const DirectContact = () => {
                     Email Address
                   </h3>
                   <a 
-                    href="mailto:info@actionguarding.com" 
+                    href="mailto:info@actionforce.in" 
                     className="font-open-sans text-lg text-gray-700 hover:text-agspl-red transition-colors duration-300"
                   >
-                    info@actionguarding.com
+                    info@actionforce.in
                   </a>
                   <p className="font-open-sans text-sm text-gray-600 mt-1">
                     We respond within 24 business hours
