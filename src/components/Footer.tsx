@@ -32,7 +32,12 @@ const Footer = () => {
               >
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-agspl-red transition-colors duration-200">
+              <a 
+                href="https://www.linkedin.com/company/action-guarding-services/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-agspl-red transition-colors duration-200"
+              >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
