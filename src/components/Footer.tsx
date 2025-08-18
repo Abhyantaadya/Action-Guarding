@@ -65,9 +65,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-agspl-red mt-1 flex-shrink-0" />
                 <div className="font-open-sans text-gray-300">
-                  Corporate Office:<br />
-                  123 Security Plaza, Business District<br />
-                  Mumbai, Maharashtra 400001
+                  Head Quarters :<br />
+                  H.Q:#8/199/2, 4th Floor, High Mark Chambers,<br />
+                  Khajaguda X Road, Cyberabad, Hyderabad-500008
                 </div>
               </div>
               <div className="flex items-center space-x-3">
