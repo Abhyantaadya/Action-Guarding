@@ -57,7 +57,7 @@ export default {
         },
         marquee: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(calc(-100% - var(--gap)))' }
+          '100%': { transform: 'translateX(-50%)' }
         }
       },
     },
