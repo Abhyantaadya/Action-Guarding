@@ -24,7 +24,12 @@ const Footer = () => {
               >
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-agspl-red transition-colors duration-200">
+              <a 
+                href="https://x.com/action_guarding?t=STRwJe7Qt_PMKQbLyayQTg&s=09" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-agspl-red transition-colors duration-200"
+              >
                 <Twitter className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-300 hover:text-agspl-red transition-colors duration-200">
