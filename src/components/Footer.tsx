@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-agspl-red flex-shrink-0" />
-                <div className="font-open-sans text-gray-300">info@actionguarding.com</div>
+                <div className="font-open-sans text-gray-300">info@actionforce.in</div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-agspl-red mt-1 flex-shrink-0" />
