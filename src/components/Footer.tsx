@@ -69,12 +69,12 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="font-montserrat font-semibold text-lg mb-6">Our Services</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Physical Guarding</a></li>
-              <li><a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Escort & EPO Security</a></li>
-              <li><a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Electronic Security</a></li>
-              <li><a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Dog Squad</a></li>
-              <li><a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Fire Training</a></li>
-              <li><a href="#" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">NSDC/MEPSC Training</a></li>
+              <li><Link to="/services/physical-guarding" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Physical Guarding</Link></li>
+              <li><Link to="/services/escort-security" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Escort & EPO Security</Link></li>
+              <li><Link to="/services/electronic-security" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Electronic Security</Link></li>
+              <li><Link to="/services/dog-squad" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Dog Squad</Link></li>
+              <li><Link to="/services/fire-training" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">Fire Training</Link></li>
+              <li><Link to="/services/certified-training" className="font-open-sans text-gray-300 hover:text-agspl-red transition-colors duration-200">NSDC/MEPSC Training</Link></li>
             </ul>
           </div>
 
